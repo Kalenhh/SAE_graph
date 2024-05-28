@@ -7,7 +7,13 @@ public class Prog{
 
 		GrapheListe gl = new GrapheListe() ;
 
-		gl.ajouterArc("A","B",1) ;
+		gl.ajouterArc("A","B",12) ;
+		gl.ajouterArc("A","D",87) ;
+		gl.ajouterArc("C","A",19) ;
+		gl.ajouterArc("D","C",10) ;
+		gl.ajouterArc("D","B",23) ;
+		gl.ajouterArc("B","E",11) ;
+		gl.ajouterArc("E","D",43) ;
 
 		System.out.println(gl) ;
 	}
