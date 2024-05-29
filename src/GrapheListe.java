@@ -55,7 +55,7 @@ public class GrapheListe implements Graphe{
 	}
 
 	/**
-	 * Retourne la liste des suivants
+	 * Retourne la liste des Arc partant du noeud n
 	 */
 	public List<Arc> getArcs(String n){
 		return this.adjacence.get(this.getIndice(n)).getArcs();
@@ -75,7 +75,6 @@ public class GrapheListe implements Graphe{
 	}
 
 
-
 	/**
 	 * Retourne l'indice d'un noeud n dans la liste noeuds
 	 */
@@ -83,10 +82,16 @@ public class GrapheListe implements Graphe{
 		return this.noeuds.indexOf(s) ;
 	}
 
+	/**
+	 * retourne la liste des noeuds present dans le graphe
+	 */
 	public List<String> listeNoeuds(){
 		return this.noeuds ;
 	}
 
+	/**
+	 * retourne la liste des voisins d'un noeud n
+	 */
 	public List<String> suivants(String n){
 		List<String> l = new ArrayList<String>() ;
 
