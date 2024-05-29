@@ -88,4 +88,22 @@ public class Valeur {
 
     }
 
+
+    /**
+     * Renvoie le plus court chemin d'un noeud
+     */
+    public List<String> calculerChemin(String destination){
+        List<String> ret = new ArrayList<String>() ;
+
+        ret.add(destination);
+
+        while(this.getParent(destination)!=null){
+            ret.add(0,this.getParent(destination));
+            destination = this.getParent(destination) ;
+        }
+
+        return ret ;
+    }
+
+
 }

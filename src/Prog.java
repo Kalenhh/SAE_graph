@@ -16,6 +16,9 @@ public class Prog{
 		gl.ajouterArc("B","E",11) ;
 		gl.ajouterArc("E","D",43) ;
 
-		System.out.println(BellmanFord.resoudre(gl,"A")) ;
+		Valeur v = BellmanFord.resoudre(gl,"A");
+		System.out.println(v) ;
+
+		System.out.println(v.calculerChemin("C")) ;
 	}
 }
