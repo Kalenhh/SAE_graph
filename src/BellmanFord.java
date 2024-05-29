@@ -3,16 +3,16 @@ import java.util.* ;
 /**
  * Implemente l'algorithme de Bellman-Ford
  */
-public class BellmanFord{
+public class BellmanFord implements Algorithme{
 
 	/**
 	 * Retourne le resultat de l'algo
 	 */
-	public static Valeur resoudre(GrapheListe g, String depart){
+	public Valeur resoudre(GrapheListe g, String depart){
 
 		Valeur valeurs = new Valeur() ;				// Contients les noeuds, leurs parents, et leurs valeurs
 		List<String> liste_noeud = g.listeNoeuds(); // Liste des noeuds presents dans le graphe
-		boolean point_fixe = true ;				// Indique si le point fixe est atteint
+		boolean point_fixe = false ;				// Indique si le point fixe est atteint
 		double distance ;						// Distance d'un arc
 		String dest ;							// destination d'un arc
 		double old_distance ;					// ancienne distance d'un noeud de destination
