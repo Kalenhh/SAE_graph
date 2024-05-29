@@ -7,6 +7,7 @@ public class Prog{
 
 		GrapheListe gl = new GrapheListe() ;
 
+
 		gl.ajouterArc("A","B",12) ;
 		gl.ajouterArc("A","D",87) ;
 		gl.ajouterArc("C","A",19) ;
@@ -15,6 +16,6 @@ public class Prog{
 		gl.ajouterArc("B","E",11) ;
 		gl.ajouterArc("E","D",43) ;
 
-		System.out.println(gl) ;
+		System.out.println(BellmanFord.resoudre(gl,"A")) ;
 	}
 }

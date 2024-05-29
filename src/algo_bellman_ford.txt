@@ -1,0 +1,43 @@
+Algo logique :
+
+
+fonction pointFixe(Graphe g, Noeud depart) 
+
+	Valeur valeurs
+
+	liste_noeud <- g.getNoeud()
+
+	pour n dans noeud faire
+
+		valeurs.put(n, infini)
+
+	fpour
+
+	valeurs.put(depart,0)
+
+	boolean iter_changed = true
+
+	tant que iter_changed
+
+		iter_changed = false
+
+		pour n dans noeud faire
+
+			pour arc dans g.suivant(n).getArcs // arc de type Arc
+
+				int distance = arc.getCout
+				String dest = arc.getDest
+
+				double old_distance = valeurs.getValeur(dest)
+				double new_distance = valeurs.getValeur(n)+distance
+				
+				si (new_distance < old_distance) alors
+
+					valeurs.setParent(dest, n)
+					valeurs.setValeur(dest, new_distance)
+
+					iter_changed = true
+
+				fsi
+			fpour
+		fpour

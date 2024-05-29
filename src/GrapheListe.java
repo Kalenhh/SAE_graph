@@ -3,7 +3,7 @@ import java.util.* ;
 /**
  * Implemente l'interface Graphe
  */
-public class GrapheListe{
+public class GrapheListe implements Graphe{
 
 	/**
 	 * Liste des noeuds
@@ -57,7 +57,7 @@ public class GrapheListe{
 	/**
 	 * Retourne la liste des suivants
 	 */
-	public List<Arc> suivant(String n){
+	public List<Arc> getArcs(String n){
 		return this.adjacence.get(this.getIndice(n)).getArcs();
 	}
 
@@ -76,12 +76,23 @@ public class GrapheListe{
 
 
 
-
-
 	/**
 	 * Retourne l'indice d'un noeud n dans la liste noeuds
 	 */
 	public int getIndice(String s){
 		return this.noeuds.indexOf(s) ;
+	}
+
+	public List<String> listeNoeuds(){
+		return this.noeuds ;
+	}
+
+	public List<String> suivants(String n){
+		List<String> l = new ArrayList<String>() ;
+
+		for(Arc a : this.getArcs(n)){
+			l.add(a.getDest());
+		}
+		return l ;
 	}
 }

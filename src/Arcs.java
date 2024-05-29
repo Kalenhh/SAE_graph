@@ -24,6 +24,7 @@ public class Arcs{
 		this.arcs.add(a) ;
 	}
 
+
 	/**
 	 * getter de arcs
 	 */
