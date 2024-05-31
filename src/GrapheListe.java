@@ -1,4 +1,5 @@
 import java.util.* ;
+import java.io.*;
 
 /**
  * Implemente l'interface Graphe
@@ -21,6 +22,37 @@ public class GrapheListe implements Graphe{
 	public GrapheListe(){
 		this.noeuds = new ArrayList<String>();
 		this.adjacence = new ArrayList<Arcs>() ;
+	}
+
+	/**
+	 * Constructeur a partir d'un fichier
+	 * @param path ; chemin relatif du fichier
+	 */
+	public GrapheListe(String path){
+
+		this.noeuds = new ArrayList<String>();
+		this.adjacence = new ArrayList<Arcs>() ;
+
+		try{
+			String[] line ; // ligne du fichier apres un split()
+			String depart ; // noeud de depart
+			String destination ; // noeud de destination
+			double value ; // valeur de l'arc
+			File f = new File(path);
+			Scanner sc = new Scanner(f);
+			while(sc.hasNextLine()){
+				line = sc.nextLine().split("\t");
+				depart = line[0];
+				destination = line[1];
+				value = Double.parseDouble(line[2]);
+
+				this.ajouterArc(depart,destination,value);
+
+			}
+		}
+		catch(Exception e){
+			System.out.println("err");
+		}
 	}
 
 	/**
