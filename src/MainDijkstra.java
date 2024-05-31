@@ -2,8 +2,8 @@
 /**
  * Main pour tester l'algo de dijkstra
  */
-public class Prog{
-	public static void Comparaison(String[] args){
+public class MainDijkstra{
+	public static void main(String[] args){
 
 		GrapheListe gl = new GrapheListe() ;
 		Dijkstra dj = new Dijkstra() ;

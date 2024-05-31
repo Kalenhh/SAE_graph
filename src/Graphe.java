@@ -12,6 +12,8 @@ public interface Graphe{
 
 	/**
 	 * Renvoie la liste des voisins d'un noeud n
+	 * 
+	 * @param n : noeud
 	 */
 	public List<String> suivants(String n);
 }

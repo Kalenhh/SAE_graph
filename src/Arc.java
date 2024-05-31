@@ -16,6 +16,9 @@ public class Arc {
 
 	/**
 	 * Constructeur
+	 * 
+	 * @param p_dest ; destination
+	 * @param p_cout ; valeur de l'arc
 	 */
 	public Arc(String p_dest, double p_cout){
 
@@ -23,14 +26,23 @@ public class Arc {
 		this.cout = p_cout ;
 	}
 
+	/**
+	 * Affiche l'arc
+	 */
 	public String toString(){
 		return this.dest+"("+this.cout+")";
 	}
 
+	/**
+	 * Getter de cout
+	 */
 	public double getCout(){
 		return this.cout ;
 	}
 
+	/**
+	 * Getter de destination
+	 */
 	public String getDest(){
 		return this.dest ;
 	}

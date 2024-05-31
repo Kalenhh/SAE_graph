@@ -56,7 +56,11 @@ public class GrapheListe implements Graphe{
 	}
 
 	/**
-	 * Ajoute un arc 
+	 * Ajoute un arc
+	 * 
+	 * @param depart : noeud de depart
+	 * @param destination : noeud de destination
+	 * @param cout : valeur de l'arc
 	 */
 	public void ajouterArc(String depart, String destination, double cout){
 
@@ -88,6 +92,8 @@ public class GrapheListe implements Graphe{
 
 	/**
 	 * Retourne la liste des Arc partant du noeud n
+	 * 
+	 * @param n : noeud
 	 */
 	public List<Arc> getArcs(String n){
 		return this.adjacence.get(this.getIndice(n)).getArcs();
@@ -109,9 +115,11 @@ public class GrapheListe implements Graphe{
 
 	/**
 	 * Retourne l'indice d'un noeud n dans la liste noeuds
+	 * 
+	 * @param n : noeud
 	 */
-	public int getIndice(String s){
-		return this.noeuds.indexOf(s) ;
+	public int getIndice(String n){
+		return this.noeuds.indexOf(n) ;
 	}
 
 	/**
@@ -123,6 +131,8 @@ public class GrapheListe implements Graphe{
 
 	/**
 	 * retourne la liste des voisins d'un noeud n
+	 * 
+	 * @param n : noeud
 	 */
 	public List<String> suivants(String n){
 		List<String> l = new ArrayList<String>() ;

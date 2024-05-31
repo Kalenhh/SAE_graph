@@ -32,6 +32,9 @@ public class Arcs{
 		return this.arcs ;
 	}
 
+	/**
+	 * Affiche tout les arcs
+	 */
 	public String toString(){
 		String ret = "" ;
 
